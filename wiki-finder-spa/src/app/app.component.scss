@@ -1,0 +1,23 @@
+.page-layout {
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-areas: 
+        "head"
+        "searchbox"
+        "searchresults";
+        
+    justify-items: center;
+    align-items: center;
+}
+
+.head {
+    grid-area: head;
+}
+
+.search-box {
+    grid-area: searchbox;
+}
+
+.search-results {
+    grid-area: searchresults;
+}
