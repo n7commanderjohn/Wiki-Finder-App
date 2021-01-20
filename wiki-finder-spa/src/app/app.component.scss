@@ -3,8 +3,7 @@
     grid-template-rows: 1fr .25fr 1fr;
     grid-template-areas: 
         "head"
-        "searchbox"
-        "searchresults";
+        "searchbox";
         
     justify-items: center;
     align-items: center;
@@ -16,8 +15,4 @@
 
 .search-box {
     grid-area: searchbox;
-}
-
-.search-results {
-    grid-area: searchresults;
 }
