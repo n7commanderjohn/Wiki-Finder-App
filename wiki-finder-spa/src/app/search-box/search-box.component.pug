@@ -1,0 +1,7 @@
+p.text-center The Search Box
+.the-search
+    form.search-form(#searchForm="ngForm", (ngSubmit)="doSearch()")
+        .search
+            input.form-control(name="searchTerm", [(ngModel)]="searchTerm", required, placeholder="Type your query here!", autofocus, title="enter text in search box to find Wikipedia articles containing these terms in the title.")
+            button.btn.btn-success(type="submit", [disabled]="!searchForm.form.valid") Search!
+    app-search-results.search-results([results]="results")

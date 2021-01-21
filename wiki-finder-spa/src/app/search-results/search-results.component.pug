@@ -1,0 +1,5 @@
+.text-center 
+    p Number of Results Found: {{ results.length }}
+ol.results
+    li(*ngFor="let result of results")
+        app-search-result([result]="result")

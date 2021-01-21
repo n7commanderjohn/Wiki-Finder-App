@@ -1,0 +1,24 @@
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.the-search {
+    display: grid;
+    // grid-template-rows: .25fr 1fr;
+    grid-template-areas: 
+        "searchForm"
+        "searchResults";
+    gap: 2rem;
+        
+    justify-items: center;
+    align-items: center;
+}
+
+.search-form {
+    grid-area: searchForm;
+}
+
+.search-results {
+    grid-area: searchResults;
+}
