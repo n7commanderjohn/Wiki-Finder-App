@@ -1,6 +1,6 @@
-export interface SearchResults {
+export interface SearchResult {
     title: string;
-    wordCount: number;
+    wordcount: number;
     snippet: string;
     timestamp: Date;
 }
