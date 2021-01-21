@@ -9,15 +9,18 @@ import { SearchResults } from './../_models/search-results';
 })
 
 export class WikiSearchService {
-  baseUrl = 'mediawiki.org/w/api.php?';
+  // baseUrl = 'https://www.mediawiki.org/w/api.php?';
+  baseUrl = 'https://www.mediawiki.org/w/api.php?format=json&origin=*&';
 
   constructor(private http: HttpClient) { }
 
-  getTest(): Observable<any> {
-    return this.http.get(this.baseUrl + 'action=help');
+  getTest() {
+    const params = 'action=query&list=allimages&ailimit=3';
+    return this.http.get(this.baseUrl + params);
   }
 
-  getResults(): Observable<SearchResults> {
-    return this.http.get<SearchResults>(this.baseUrl + 'action=help');
+  getSearchResults(searchTerm: string): Observable<SearchResults> {
+    const params = 'action=query&list=search&srsearch=' + searchTerm;
+    return this.http.get<SearchResults>(this.baseUrl + params);
   }
 }

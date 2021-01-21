@@ -17,6 +17,12 @@ export class SearchBoxComponent implements OnInit {
 
   doSearch() {
     console.log(this.searchTerm);
+    this.wikiSearch.getSearchResults(this.searchTerm).subscribe({
+      next: results => {
+        console.log(results);
+      }
+    });
+    // this.wikiSearch.getResults(this.searchTerm);
   }
 
 }
