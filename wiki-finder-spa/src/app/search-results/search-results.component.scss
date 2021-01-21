@@ -1,5 +1,9 @@
+// .results {
+//     display: flex;
+//     flex-direction: column;
+// }
+
 .results {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    gap: 2rem;
 }

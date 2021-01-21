@@ -1,8 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-
-import { SearchResults } from './../_models/search-results';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +16,8 @@ export class WikiSearchService {
     return this.http.get(this.baseUrl + params);
   }
 
-  getSearchResults(searchTerm: string): Observable<SearchResults> {
+  getSearchResults(searchTerm: string) {
     const params = 'action=query&list=search&srsearch=' + searchTerm;
-    return this.http.get<SearchResults>(this.baseUrl + params);
+    return this.http.get(this.baseUrl + params);
   }
 }
